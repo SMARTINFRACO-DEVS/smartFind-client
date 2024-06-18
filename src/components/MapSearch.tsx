@@ -98,7 +98,7 @@ const MapSearch: React.FC = () => {
             <FaLocationPin className="w text-[#f5f5f5]" />
           </button>
           <button onClick={handleSearch} className="p-2 rounded-md ml-2 bg-sky-900 py-2 text-white">
-            Search
+            Search well
           </button>
         </div>
       </div>
