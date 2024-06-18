@@ -16,7 +16,7 @@ const MapComponent = ({ coordinates }: { coordinates: { lat: number; lng: number
 
   const fetchData = async () => {
     try {
-      const response = await fetch('http://10.247.5.180:3005/api/data');
+      const response = await fetch('http://zwgc0gs.10.247.5.115.sslip.io/api/data');
       const data = await response.json();
       // console.log(data);
       setApiKey(data.apiKey);

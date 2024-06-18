@@ -13,7 +13,7 @@ const MapSearch: React.FC = () => {
   
   const fetchData = async () => {
     try {
-      const response = await fetch('http://10.247.5.180:3005/api/data');
+      const response = await fetch('http://zwgc0gs.10.247.5.115.sslip.io/api/data');
       const data = await response.json();
       setApiKey(data.apiKey);
     } catch (error) {
@@ -47,7 +47,7 @@ const MapSearch: React.FC = () => {
   };
 
   const checkConnectivity = async (lat: number, lng: number) => {
-    const postResponse = await axios.post('http://10.247.5.180:3005/checkConnectivity', {
+    const postResponse = await axios.post('http://zwgc0gs.10.247.5.115.sslip.io/checkConnectivity', {
       clientlatitude: lat,
       clientlongitude: lng,
     });
