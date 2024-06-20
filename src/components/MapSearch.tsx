@@ -45,7 +45,7 @@ const MapSearch: React.FC = () => {
       setLoading(false);
     }
   };
-
+// working
   const checkConnectivity = async (lat: number, lng: number) => {
     const postResponse = await axios.post('https://findmy.smartinfraco.com/checkConnectivity', {
       clientlatitude: lat,
