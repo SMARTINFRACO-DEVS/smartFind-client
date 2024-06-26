@@ -13,7 +13,7 @@ const MapSearch: React.FC = () => {
   
   const fetchData = async () => {
     try {
-      const response = await fetch('https://findmy.smartinfraco.com/api/data');
+      const response = await fetch('https://smartfind-backend.197.253.124.146.sslip.io/api/data');
       const data = await response.json();
       setApiKey(data.apiKey);
     } catch (error) {
@@ -47,7 +47,7 @@ const MapSearch: React.FC = () => {
   };
 
   const checkConnectivity = async (lat: number, lng: number) => {
-    const postResponse = await axios.post('https://findmy.smartinfraco.com/checkConnectivity', {
+    const postResponse = await axios.post('https://smartfind-backend.197.253.124.146.sslip.io/checkConnectivity', {
       clientlatitude: lat,
       clientlongitude: lng,
     });
