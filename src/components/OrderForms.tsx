@@ -31,7 +31,7 @@ const OrderForms: React.FC<OrderFormsProps> = ({ initialCoordinates }) => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch('https://smartfind-backend.197.253.124.146.sslip.io/api/data');
+      const response = await fetch('https://sfb.smartinfraco.com/api/data');
       const data = await response.json();
       setApiKey(data.apiKey);
     } catch (error) {
@@ -116,7 +116,7 @@ const OrderForms: React.FC<OrderFormsProps> = ({ initialCoordinates }) => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     try {
-      const response = await fetch('https://smartfind-backend.197.253.124.146.sslip.io/submitForm', {
+      const response = await fetch('https://sfb.smartinfraco.com/submitForm', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
